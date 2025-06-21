@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% block content %}
+{% for snake in snakes %}
+<div class="card" style="width: 18rem;">
+  <img src= "{{snake.image}}"class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{snake.color}}</h5>
+    <p class="card-text">{{snake.name}}</p>
+    <a href="#" class="btn btn-primary">{{snake.price}}</a>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

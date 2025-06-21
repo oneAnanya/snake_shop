@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Snake Shop</title> 
+        <style>
+            .card-container{
+            max-width : 700px;
+            margin : 0 auto;
+            display : grid;
+            padding : 20px 0}
+            .card{
+                border : 1px solid black;
+                border-radius : 10px
+            }
+        </style>  
+    </head>
+    <body>
+        <h1>Snakes</h1>
+        <!-- <ul>
+            {% for snake in snakes %}
+                <li>{{snake.name}}|{{snake.color}}</li>
+
+            {% endfor %}
+        </ul> -->
+        <div class = "card-container">
+            {% for snake in snakes %}
+                <div class = "card">
+                    <img src = "{{snake.image}}"></img>
+                    <h3>name : {{snake.name}}</h3>
+                    <p>color :{{snake.color}} </p>
+                    <button>Price : {{ snake.price}}</button>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>
